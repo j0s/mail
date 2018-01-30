@@ -97,6 +97,7 @@ define(function(require) {
 			' --------\n';
 
 		// TODO: find a better way to get the current message body
+		// TODO: prevent stacking of several Fwd prefixes
 		var data = {
 			subject: 'Fwd: ' + require('state').currentMessageSubject,
 			body: header + require('state').currentMessageBody.replace(/<br \/>/g, '\n')
